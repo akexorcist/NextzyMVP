@@ -20,10 +20,6 @@ allprojects {
     }
 }
 
-//retrolambda {
-//    jvmArgs '-noverify'
-//}
-
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
