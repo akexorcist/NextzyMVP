@@ -1,4 +1,4 @@
-package com.nextzy.nextzymvp.common.base;
+package com.nextzy.nextzymvp.common.mvp.base;
 
 import android.content.Intent;
 import android.os.Bundle;

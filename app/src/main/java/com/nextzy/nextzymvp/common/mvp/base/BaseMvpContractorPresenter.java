@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.nextzy.nextzymvp.common.base;
+package com.nextzy.nextzymvp.common.mvp.base;
 
 public interface BaseMvpContractorPresenter {
 

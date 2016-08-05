@@ -1,11 +1,11 @@
-package com.nextzy.nextzymvp.common;
+package com.nextzy.nextzymvp.common.mvp;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.nextzy.nextzymvp.common.base.BaseMvpContractorPresenter;
-import com.nextzy.nextzymvp.common.base.BaseMvpActivity;
+import com.nextzy.nextzymvp.common.mvp.base.BaseMvpContractorPresenter;
+import com.nextzy.nextzymvp.common.mvp.base.BaseMvpActivity;
 
 /**
  * Created by Akexorcist on 8/4/16 AD.

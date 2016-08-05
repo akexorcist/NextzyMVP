@@ -7,7 +7,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.nextzy.nextzymvp.R;
-import com.nextzy.nextzymvp.common.NextzyMvpActivity;
+import com.nextzy.nextzymvp.common.mvp.NextzyMvpActivity;
 
 public class MainActivity extends NextzyMvpActivity<MainContractor.Presenter> implements MainContractor.View, View.OnClickListener {
     public static String KEY_MESSAGE = "key_message";

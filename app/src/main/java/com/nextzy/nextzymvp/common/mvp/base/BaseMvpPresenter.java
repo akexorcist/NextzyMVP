@@ -1,4 +1,4 @@
-package com.nextzy.nextzymvp.common.base;
+package com.nextzy.nextzymvp.common.mvp.base;
 
 /**
  * Created by Akexorcist on 8/1/16 AD.

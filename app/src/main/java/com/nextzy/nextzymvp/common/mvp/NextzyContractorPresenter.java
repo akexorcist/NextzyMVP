@@ -1,6 +1,6 @@
-package com.nextzy.nextzymvp.common;
+package com.nextzy.nextzymvp.common.mvp;
 
-import com.nextzy.nextzymvp.common.base.BaseMvpContractorPresenter;
+import com.nextzy.nextzymvp.common.mvp.base.BaseMvpContractorPresenter;
 
 /**
  * Created by Akexorcist on 8/5/16 AD.

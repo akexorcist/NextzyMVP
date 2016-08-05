@@ -1,7 +1,7 @@
 package com.nextzy.nextzymvp.module.main;
 
-import com.nextzy.nextzymvp.common.NextzyContractorPresenter;
-import com.nextzy.nextzymvp.common.NextzyContractorView;
+import com.nextzy.nextzymvp.common.mvp.NextzyContractorPresenter;
+import com.nextzy.nextzymvp.common.mvp.NextzyContractorView;
 
 /**
  * Created by Akexorcist on 8/1/16 AD.

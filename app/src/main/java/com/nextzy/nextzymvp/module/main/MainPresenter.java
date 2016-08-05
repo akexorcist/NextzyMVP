@@ -1,6 +1,6 @@
 package com.nextzy.nextzymvp.module.main;
 
-import com.nextzy.nextzymvp.common.NextzyPresenter;
+import com.nextzy.nextzymvp.common.mvp.NextzyPresenter;
 
 /**
  * Created by Akexorcist on 8/1/16 AD.
