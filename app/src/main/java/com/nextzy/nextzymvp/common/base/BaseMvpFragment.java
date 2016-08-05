@@ -1,41 +1,50 @@
 package com.nextzy.nextzymvp.common.base;
 
-import android.content.Intent;
 import android.os.Bundle;
-
-import com.akexorcist.localizationactivity.LocalizationActivity;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 /**
- * Created by Akexorcist on 8/1/16 AD.
+ * Created by Akexorcist on 8/5/16 AD.
  */
-public abstract class BaseMvpActivity<CP extends BaseMvpContractorPresenter> extends LocalizationActivity implements BaseMvpContractorView<CP> {
+public abstract class BaseMvpFragment<CP extends BaseMvpContractorPresenter> extends Fragment implements BaseMvpContractorView<CP> {
     private CP presenter;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(getLayoutView());
+        if (savedInstanceState == null) {
+            restoreArgument(getArguments());
+        } else {
+            restoreInstanceState(savedInstanceState);
+        }
+    }
+
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        return LayoutInflater.from(container.getContext()).inflate(getLayoutView(), container, false);
+    }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
         bindView();
         setupView();
         createPresenter();
-
         if (savedInstanceState == null) {
-            Intent intent = getIntent();
-            if (intent != null) {
-                restoreArgument(intent.getExtras());
-            }
             initialize();
+        } else {
+            restoreView();
         }
     }
 
     public abstract int getLayoutView();
 
     protected abstract void createPresenter();
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-    }
 
     public abstract void bindView();
 
@@ -52,16 +61,9 @@ public abstract class BaseMvpActivity<CP extends BaseMvpContractorPresenter> ext
     public abstract void saveInstanceState(Bundle outState);
 
     @Override
-    protected void onSaveInstanceState(Bundle outState) {
+    public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         saveInstanceState(outState);
-    }
-
-    @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        restoreInstanceState(savedInstanceState);
-        restoreView();
     }
 
     public CP getPresenter() {

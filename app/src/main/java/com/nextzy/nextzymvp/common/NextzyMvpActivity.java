@@ -4,13 +4,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.nextzy.nextzymvp.common.base.BaseContractorPresenter;
+import com.nextzy.nextzymvp.common.base.BaseMvpContractorPresenter;
 import com.nextzy.nextzymvp.common.base.BaseMvpActivity;
 
 /**
  * Created by Akexorcist on 8/4/16 AD.
  */
-public abstract class NextzyMvpActivity<CP extends BaseContractorPresenter> extends BaseMvpActivity<CP> {
+public abstract class NextzyMvpActivity<CP extends BaseMvpContractorPresenter> extends BaseMvpActivity<CP> {
     public View getRootView() {
         return getWindow().getDecorView().getRootView();
     }

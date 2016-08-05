@@ -1,14 +1,14 @@
 package com.nextzy.nextzymvp.module.main;
 
-import com.nextzy.nextzymvp.common.base.BaseContractorPresenter;
-import com.nextzy.nextzymvp.common.base.BaseContractorView;
+import com.nextzy.nextzymvp.common.NextzyContractorPresenter;
+import com.nextzy.nextzymvp.common.NextzyContractorView;
 
 /**
  * Created by Akexorcist on 8/1/16 AD.
  */
 public class MainContractor {
 
-    public interface Presenter extends BaseContractorPresenter {
+    public interface Presenter extends NextzyContractorPresenter {
         void onButtonOkClicked();
 
         void onButtonSaveClicked(String message);
@@ -18,7 +18,7 @@ public class MainContractor {
         void setMessage(String message);
     }
 
-    public interface View extends BaseContractorView<Presenter> {
+    public interface View extends NextzyContractorView<Presenter> {
         void showToastMessage();
 
         void showSavedMessage(String message);

@@ -16,10 +16,8 @@
 
 package com.nextzy.nextzymvp.common.base;
 
-public interface BaseContractorPresenter {
+public interface BaseMvpContractorView<CP extends BaseMvpContractorPresenter> {
 
-    void start();
-
-    void stop();
+    void setPresenter(CP presenter);
 
 }

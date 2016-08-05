@@ -1,12 +1,12 @@
 package com.nextzy.nextzymvp.module.main;
 
-import com.nextzy.nextzymvp.common.base.BasePresenter;
+import com.nextzy.nextzymvp.common.NextzyPresenter;
 
 /**
  * Created by Akexorcist on 8/1/16 AD.
  */
 @SuppressWarnings("Convert2Lambda")
-public class MainPresenter extends BasePresenter<MainContractor.View> implements MainContractor.Presenter {
+public class MainPresenter extends NextzyPresenter<MainContractor.View> implements MainContractor.Presenter {
     String message;
 
     public static MainPresenter createPresenter(MainContractor.View view) {
